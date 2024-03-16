@@ -1,21 +1,5 @@
 'use strict';
 
-// Задача: переписать функцию `total`, чтобы она была асинхронной с таймерами JavaScript
-// Используйте `setInterval` и `clearInterval` для проверки следующего элемента каждые 1 секунду
-// Вычисления будут выполняться асинхронно из-за таймеров
-// Запустите `total` дважды (как в примере ниже), но параллельно
-// Вывести отладочный вывод для каждого шага вычислений (каждую секунду)
-
-// Hint: example output:
-// { check: { item: { name: 'Laptop', price: 1500 } } }
-// { check: { item: { name: 'Laptop', price: 1500 } } }
-// { check: { item: { name: 'Keyboard', price: 100 } } }
-// { check: { item: { name: 'Keyboard', price: 100 } } }
-// { check: { item: { name: 'HDMI cable', price: 10 } } }
-// { check: { item: { name: 'HDMI cable', price: 10 } } }
-// { money: 1610 }
-// { money: 1610 }
-
 const total = (items, callback) => {
   let result = 0;
   let i = 0;

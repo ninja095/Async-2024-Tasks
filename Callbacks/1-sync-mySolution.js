@@ -4,12 +4,12 @@
 
 // Change signature to: (items, callback(result))
 
-const total = (items) => {
+const total = (items, callback) => {
   let result = 0;
   for (const item of items) {
     result += item.price;
   }
-  return result;
+  callback(result);
 };
 
 const electronics = [
@@ -19,5 +19,6 @@ const electronics = [
 ];
 
 // Use new signature total(electronics, (money) => ...)
-const money = total(electronics);
-console.log({ money });
+total(electronics, (money) => {
+  console.log({ money });
+});
